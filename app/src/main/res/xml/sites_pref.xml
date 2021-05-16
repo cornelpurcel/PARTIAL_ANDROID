@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen android:title="Technology">
+
+        <CheckBoxPreference
+            android:key="site_techcrunch"
+            android:defaultValue="false"
+            android:title="@string/site_techcrunch"
+            />
+        <CheckBoxPreference
+            android:key="site_wired"
+            android:defaultValue="false"
+            android:title="@string/site_wired"
+            />
+        <CheckBoxPreference
+            android:key="site_nytimes"
+            android:defaultValue="false"
+            android:title="@string/site_nytimes"
+            />
+        <CheckBoxPreference
+            android:key="site_macworld"
+            android:defaultValue="false"
+            android:title="@string/site_macworld"
+            />
+        <CheckBoxPreference
+            android:key="site_pcworld"
+            android:defaultValue="false"
+            android:title="@string/site_pcworld"
+            />
+        <CheckBoxPreference
+            android:key="site_copmuterworld"
+            android:defaultValue="false"
+            android:title="@string/site_computerworld"
+            />
+        <CheckBoxPreference
+            android:key="site_lifehacker"
+            android:defaultValue="false"
+            android:title="@string/lifehacker"
+            />
+    </PreferenceScreen>
+
+    <PreferenceScreen android:title="News">
+
+        <CheckBoxPreference
+            android:key="site_wsj"
+            android:defaultValue="false"
+            android:title="@string/site_wsj"
+            />
+        <CheckBoxPreference
+            android:key="site_bbc"
+            android:defaultValue="false"
+            android:title="@string/site_bbc"
+            />
+        <CheckBoxPreference
+            android:key="site_euronews"
+            android:defaultValue="false"
+            android:title="@string/site_euronews"
+            />
+    </PreferenceScreen>
+</PreferenceScreen>

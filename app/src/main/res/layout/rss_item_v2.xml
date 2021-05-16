@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:cardView="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        cardView:cardElevation="3dp"
+        cardView:cardCornerRadius="10dp"
+        cardView:cardBackgroundColor="@color/white"
+        cardView:cardMaxElevation="3dp"
+        cardView:cardPreventCornerOverlap="true"
+        cardView:cardUseCompatPadding="true"
+        cardView:barrierMargin="10dp"
+        android:layout_margin="0dp"
+        >
+
+        <!--
+        In the above cardview widget
+        cardelevation property will give elevation to your card view
+        card corner radius will provide radius to your card view
+        card background color will give background color to your card view
+        card max elevation will give the cardview maximum elevation
+        card prevent corner overlap will add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.
+        card use compact padding will add padding in API v21+ as well to have the same measurements with previous versions.
+        below are the two widgets imageview and text view we are displaying inside our card view.
+        -->
+<!--        <ImageView-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:src="@drawable/gfgimage"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:id="@+id/img"-->
+<!--            android:contentDescription="@string/app_name" />-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/element_text"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/txt_description"
+            android:layout_below="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/element_description"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="12sp"
+            />
+
+        <TextView
+            android:id="@+id/txt_site"
+            android:layout_below="@+id/txt_description"
+            android:layout_toRightOf="@id/txt_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/site_name"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            />
+
+        <TextView
+            android:id="@+id/txt_date"
+            android:layout_below="@+id/txt_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/element_date"
+            android:layout_gravity="bottom|end"
+            android:layout_marginTop="5dp"
+            android:layout_margin="10dp"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            />
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
