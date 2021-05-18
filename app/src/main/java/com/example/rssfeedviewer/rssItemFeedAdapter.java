@@ -19,6 +19,10 @@ public class rssItemFeedAdapter extends RecyclerView.Adapter<rssItemViewHolder> 
     MyClickListener listener;
     SimpleDateFormat formatter;
 
+    public void setList(List<RSSItem> newList){
+        this.list = newList;
+    }
+
     public rssItemFeedAdapter(List<RSSItem> list, Context context, MyClickListener listener){
         this.list = list;
         this.context = context;

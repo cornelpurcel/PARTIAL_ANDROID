@@ -29,6 +29,7 @@ import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
+
     rssItemFeedAdapter adapter;
     RecyclerView recyclerView;
     MyClickListener listener;
@@ -83,12 +84,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.menu_refresh){
-            finish();
-            overridePendingTransition(0, 0);
-            startActivity(getIntent());
-            overridePendingTransition(0, 0);
+            initSiteList();
+            startRssDownloadThread();
+//            finish();
+//            overridePendingTransition(0, 0);
+//            startActivity(getIntent());
+//            overridePendingTransition(0, 0);
             return true;
         } else if (item.getItemId() == R.id.menu_users){
+            startActivity(new Intent(this, UsersActivity.class));
             return true;
         } else if (item.getItemId() == R.id.menu_preferences){
             startActivity(new Intent(this, SitesActivity.class));
@@ -99,8 +103,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initSiteList() {
         sites = new ArrayList<String>();
+        String username = ((MyApplication) this.getApplication()).getUsername();
 
-        SharedPreferences pref = getSharedPreferences("sites_pref", 0);
+
+        SharedPreferences pref = getSharedPreferences("sites_pref_" + username, 0);
         Set set = siteMap.entrySet();
         Iterator itr=set.iterator();
         while(itr.hasNext()){

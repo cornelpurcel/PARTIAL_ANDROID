@@ -34,4 +34,8 @@
     <string name="site_wsj">Wall Street Journal</string>
     <string name="site_bbc">BBC</string>
     <string name="site_euronews">Euronews</string>
+    <string name="add">Add</string>
+    <string name="cancel">Cancel</string>
+    <string name="ask_for_username">Input username</string>
+    <string name="username">Username</string>
 </resources>

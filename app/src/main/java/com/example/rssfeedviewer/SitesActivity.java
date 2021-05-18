@@ -14,7 +14,9 @@ public class SitesActivity extends PreferenceActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getPreferenceManager().setSharedPreferencesName("sites_pref");
+
+        String username = ((MyApplication) this.getApplication()).getUsername();
+        getPreferenceManager().setSharedPreferencesName("sites_pref_" + username);
         addPreferencesFromResource(R.xml.sites_pref);
 
     }
